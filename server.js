@@ -25,7 +25,7 @@ app.use(express.static('public', {
 app.use('/uploads', express.static('uploads'));
 
 // Data paths
-const DATA_DIR = 'D:\\311-building-b-data\\data';
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
 

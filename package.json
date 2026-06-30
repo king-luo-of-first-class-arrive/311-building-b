@@ -1,0 +1,18 @@
+{
+  "name": "311-building-b",
+  "version": "1.0.0",
+  "description": "311大厦B - 在线群聊平台",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.2"
+  }
+}

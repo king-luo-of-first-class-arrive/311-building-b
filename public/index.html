@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>311大厦B - 群聊</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- ==================== Login/Register Page ==================== -->
+<div id="auth-page" class="auth-page">
+  <div class="auth-container">
+    <h1 class="auth-title">311大厦B</h1>
+    <p class="auth-subtitle">欢迎加入群聊</p>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">登录</button>
+      <button class="auth-tab" data-tab="register">注册</button>
+    </div>
+    <form id="login-form" class="auth-form active">
+      <input type="text" id="login-name" placeholder="姓名" maxlength="20" autocomplete="off">
+      <input type="password" id="login-password" placeholder="密码">
+      <button type="submit" class="auth-btn">登录</button>
+    </form>
+    <form id="register-form" class="auth-form">
+      <input type="text" id="reg-name" placeholder="姓名" maxlength="20" autocomplete="off">
+      <input type="password" id="reg-password" placeholder="密码">
+      <button type="submit" class="auth-btn">注册</button>
+    </form>
+    <p id="auth-error" class="auth-error"></p>
+  </div>
+</div>
+
+<!-- ==================== Chat Page ==================== -->
+<div id="chat-page" class="chat-page hidden">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>311大厦B</h2>
+      <span class="online-count">成员 <b id="member-count">0</b></span>
+    </div>
+    <div class="member-list" id="member-list"></div>
+    <div class="sidebar-footer">
+      <div class="current-user" id="current-user-info"></div>
+      <div class="checkin-section">
+        <button class="btn-checkin" id="btn-checkin">签到 +5</button>
+        <span class="checkin-days" id="checkin-days"></span>
+      </div>
+      <button class="btn-settings" id="btn-settings">个人设置</button>
+      <button class="btn-settings btn-admin hidden" id="btn-admin">管理员面板</button>
+      <button class="btn-logout" id="btn-logout">退出</button>
+    </div>
+  </div>
+
+  <!-- Main chat area -->
+  <div class="chat-main">
+    <div class="chat-messages" id="chat-messages">
+      <div class="welcome-msg">
+        <div class="welcome-icon">🏢</div>
+        <h2>欢迎来到 311大厦B</h2>
+        <p>开始畅聊吧！</p>
+      </div>
+    </div>
+    <div class="typing-indicator hidden" id="typing-indicator"></div>
+    <div id="connection-status" style="text-align:center;padding:4px;font-size:12px;background:#1a1a2e;color:#e94560">连接中...</div>
+    <div class="chat-input-area">
+      <div class="input-toolbar">
+        <button class="tool-btn" id="btn-image" title="发送图片">🖼️</button>
+        <button class="tool-btn" id="btn-file" title="发送文件">📎</button>
+        <input type="file" id="file-input" class="file-hidden" accept="image/*" multiple style="display:none">
+        <input type="file" id="doc-input" class="file-hidden" style="display:none">
+      </div>
+      <div class="input-row">
+        <textarea id="message-input" placeholder="输入消息..." rows="1" maxlength="5000"></textarea>
+        <button class="send-btn" id="btn-send">发送</button>
+      </div>
+      <div class="file-preview hidden" id="file-preview"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== Settings Modal ==================== -->
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h2>个人设置</h2>
+    <div class="avatar-section">
+      <div class="avatar-preview" id="avatar-preview">
+        <span id="avatar-text">🐷</span>
+      </div>
+      <p>当前头像</p>
+      <input type="file" id="avatar-input" accept="image/*">
+      <button class="auth-btn" id="btn-save-avatar">上传新头像</button>
+      <button class="auth-btn btn-reset-avatar" id="btn-reset-avatar">恢复默认头像</button>
+    </div>
+    <div class="xp-section">
+      <h3>等级系统</h3>
+      <div class="xp-info">
+        <span class="xp-level">LV.<b id="xp-level">1</b></span>
+        <span class="xp-text" id="xp-text">0 / 5</span>
+        <span class="xp-consecutive" id="xp-consecutive"></span>
+      </div>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="xp-bar" style="width:0%"></div>
+      </div>
+      <p class="xp-max hidden" id="xp-max-hint">已满级</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== Admin Modal ==================== -->
+<div id="admin-modal" class="modal hidden">
+  <div class="modal-content admin-content">
+    <span class="modal-close" id="admin-close">&times;</span>
+    <h2>管理员面板</h2>
+    <div class="admin-section">
+      <h3>注册用户</h3>
+      <table class="admin-table">
+        <thead><tr><th>姓名</th><th>注册时间</th></tr></thead>
+        <tbody id="admin-user-list"></tbody>
+      </table>
+    </div>
+    <div class="admin-section">
+      <h3>登记通知</h3>
+      <div id="admin-notifications"></div>
+    </div>
+    <div class="admin-section">
+      <button class="auth-btn btn-danger" id="btn-clear-messages">清空所有聊天记录</button>
+    </div>
+  </div>
+</div>
+
+<!-- Context Menu -->
+<div id="context-menu" class="context-menu hidden"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
+</body>
+</html>

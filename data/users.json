@@ -1,0 +1,67 @@
+[
+  {
+    "id": "admin-1782703565505",
+    "name": "罗文俊",
+    "password": "$2a$10$G3so91Hm4NBQSpXUPFX3leuMTDFY.BM/IWjWrniq/L0PGEpYE3dB2",
+    "avatar": null,
+    "isAdmin": true,
+    "createdAt": "2026-06-29T03:26:05.628Z",
+    "xp": 5,
+    "consecutiveDays": 1,
+    "lastCheckinDate": "2026-06-29"
+  },
+  {
+    "id": "user-1782704066363",
+    "name": "114514",
+    "password": "$2a$10$vsrcHTLB7cjxW8lAsVVD8.7BMegr5g/Aj7zvPX8sLLGPh19js1uCG",
+    "avatar": null,
+    "isAdmin": false,
+    "createdAt": "2026-06-29T03:34:26.488Z"
+  },
+  {
+    "id": "user-1782706058832",
+    "name": "qjr",
+    "password": "$2a$10$vvUZV4c2YfgW49ph3r9fb.swvgpSUtd9e2tvmkEMmAP9KTokmAFcy",
+    "avatar": "/uploads/avatars/1782706120608-870022321.jpeg",
+    "isAdmin": false,
+    "createdAt": "2026-06-29T04:07:38.957Z"
+  },
+  {
+    "id": "user-1782706133425",
+    "name": "牛逼",
+    "password": "$2a$10$jmGRr2N18s2E2z/Q99K9ye/8.TbpzuwhSP9ztm.XXS2OTe9nmu9K6",
+    "avatar": null,
+    "isAdmin": false,
+    "createdAt": "2026-06-29T04:08:53.550Z"
+  },
+  {
+    "id": "user-1782706208822",
+    "name": "步临轩",
+    "password": "$2a$10$Mzc4Y.jSvQc1aGUGpR7KfuKlKLLmNd/HMANJwrcnKecez2g1.kTMq",
+    "avatar": "/uploads/avatars/1782706251003-136861285.png",
+    "isAdmin": false,
+    "createdAt": "2026-06-29T04:10:08.944Z"
+  },
+  {
+    "id": "user-1782735127477",
+    "name": "testxp",
+    "password": "$2a$10$e1ytrIAX286Nc7UNt0tAAeFq8se5jjBX1ja3y5CSV0WPhMFOPOZXS",
+    "avatar": null,
+    "isAdmin": false,
+    "createdAt": "2026-06-29T12:12:07.600Z",
+    "xp": 5,
+    "consecutiveDays": 1,
+    "lastCheckinDate": "2026-06-29"
+  },
+  {
+    "id": "user-1782735737911",
+    "name": "ajun",
+    "password": "$2a$10$xyocBYd7JrNEhzS9fU3FGeIOubuGogFlzkt6ldwIorG0DVZSN4zy2",
+    "avatar": null,
+    "isAdmin": false,
+    "createdAt": "2026-06-29T12:22:18.054Z",
+    "xp": 5,
+    "consecutiveDays": 1,
+    "lastCheckinDate": "2026-06-29"
+  }
+]

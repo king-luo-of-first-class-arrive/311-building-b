@@ -1,0 +1,101 @@
+[
+  {
+    "id": "msg-1782719505828-zsqp2y",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "1111",
+    "time": "2026-06-29T07:51:45.828Z"
+  },
+  {
+    "id": "msg-1782723334590-mzjjwe",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "111",
+    "time": "2026-06-29T08:55:34.590Z"
+  },
+  {
+    "id": "msg-1782723336945-v8ar1s",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "111",
+    "time": "2026-06-29T08:55:36.945Z"
+  },
+  {
+    "id": "msg-1782723937499-9s5vrq",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "2",
+    "time": "2026-06-29T09:05:37.499Z"
+  },
+  {
+    "id": "msg-1782733626650-cqvdxy",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "11",
+    "time": "2026-06-29T11:47:06.650Z"
+  },
+  {
+    "id": "msg-1782735434598-wryzf6",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "111",
+    "time": "2026-06-29T12:17:14.599Z"
+  },
+  {
+    "id": "msg-1782735560203-3swisv",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "11",
+    "time": "2026-06-29T12:19:20.203Z"
+  },
+  {
+    "id": "msg-1782735741486-o406uv",
+    "type": "text",
+    "userId": "user-1782735737911",
+    "userName": "ajun",
+    "userAvatar": null,
+    "content": "11",
+    "time": "2026-06-29T12:22:21.486Z"
+  },
+  {
+    "id": "msg-1782735916730-u838rs",
+    "type": "text",
+    "userId": "user-1782735737911",
+    "userName": "ajun",
+    "userAvatar": null,
+    "content": "，",
+    "time": "2026-06-29T12:25:16.730Z"
+  },
+  {
+    "id": "msg-1782803844580-dfpezz",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "111",
+    "time": "2026-06-30T07:17:24.580Z"
+  },
+  {
+    "id": "msg-1782803847344-rebrey",
+    "type": "text",
+    "userId": "admin-1782703565505",
+    "userName": "罗文俊",
+    "userAvatar": null,
+    "content": "11",
+    "time": "2026-06-30T07:17:27.344Z"
+  }
+]
